@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/item_corner_radius"
+    app:cardElevation="@dimen/item_elevation"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_light_blue"
+        android:padding="@dimen/item_padding">
+
+        <ImageView
+            android:id="@+id/main_contact_image"
+            android:layout_width="@dimen/main_image_size"
+            android:layout_height="@dimen/main_image_size"
+            android:contentDescription="@string/main_description_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/main_tv_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_margin_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_contact_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Иван Иванов" />
+
+        <TextView
+            android:id="@+id/main_tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_margin_horizontal"
+            android:layout_marginTop="@dimen/item_margin_vertical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/main_gray_text"
+            android:textSize="@dimen/item_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_contact_image"
+            app:layout_constraintTop_toBottomOf="@id/main_tv_full_name"
+            tools:text="84951234455" />
+
+        <TextView
+            android:id="@+id/main_tv_id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_margin_horizontal"
+            android:layout_marginTop="@dimen/item_margin_vertical"
+            android:text="@string/main_id_label"
+            android:textColor="@color/main_gray_text"
+            android:textSize="@dimen/item_text_size"
+            app:layout_constraintStart_toEndOf="@id/main_contact_image"
+            app:layout_constraintTop_toBottomOf="@id/main_tv_phone" />
+
+        <TextView
+            android:id="@+id/main_tv_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_margin_horizontal"
+            android:layout_marginTop="@dimen/item_margin_vertical"
+            android:textColor="@color/main_gray_text"
+            android:textSize="@dimen/item_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_tv_id_label"
+            app:layout_constraintTop_toBottomOf="@id/main_tv_phone"
+            tools:text="95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
